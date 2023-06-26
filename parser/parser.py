@@ -6,12 +6,13 @@ from bs4 import BeautifulSoup
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager(cache_valid_range=10).install()))
 url = 'https://animevost.org/tip/tv/2959-kaminaki-sekai-no-kamisama-katsudou.html'
-time.sleep(5)
 driver.get(url)
+time.sleep(5)
 html = driver.page_source
 soup = BeautifulSoup(html, 'html.parser')
-timer = soup.findAll('div', class_="shortstoryContent")
-for t in timer:
+timer = soup.body
+swag = timer.table('div', id='nexttime')
+for t in swag:
     h = t.getText()
     pass
     print(h)
