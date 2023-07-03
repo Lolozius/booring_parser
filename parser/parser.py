@@ -34,5 +34,5 @@ class BoringParser:
             print('Я днс не чувствую..')
 
 
-time_vallue = BoringParser(input())
-time_vallue.parser()
+time_value = BoringParser(input())
+time_value.parser()
