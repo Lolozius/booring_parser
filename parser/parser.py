@@ -10,7 +10,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 class BoringParser:
     """
     Пока нет идей куда применить в будущем не забыть чё нить своять
-    (Внешнее приложение)
+    (Внешнее приложение?)
     """
     def __init__(self, link):
         self.link = link
@@ -28,8 +28,8 @@ class BoringParser:
             soup = BeautifulSoup(html, 'html.parser')
             timer = soup.body.table('div', id='nexttime')
             for t in timer:
-                h = t.getText()
-                print(h)
+                text = t.getText()
+                print(text)
         except requests.ConnectionError:
             print('Я днс не чувствую..')
 
